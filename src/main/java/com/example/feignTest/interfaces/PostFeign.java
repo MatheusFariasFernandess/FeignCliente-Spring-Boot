@@ -10,7 +10,6 @@ import java.util.List;
 @FeignClient(name = "feignTest" , url= "https://jsonplaceholder.typicode.com")
 public interface PostFeign {
 
-//    @GetMapping(value = "posts")
     @GetMapping(value = "posts")
     List<Posts>getAllPost();
 
