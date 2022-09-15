@@ -72,4 +72,68 @@ public class Cep {
     public void setService(String service) {
         this.service = service;
     }
+
+
+    public static final class builder {
+        private String cep;
+        private String state;
+        private String city;
+        private String neighborhood;
+        private String street;
+        private String service;
+        private List<String> Location;
+
+        private builder() {
+        }
+
+        public static builder aCep() {
+            return new builder();
+        }
+
+        public builder cep(String cep) {
+            this.cep = cep;
+            return this;
+        }
+
+        public builder state(String state) {
+            this.state = state;
+            return this;
+        }
+
+        public builder city(String city) {
+            this.city = city;
+            return this;
+        }
+
+        public builder neighborhood(String neighborhood) {
+            this.neighborhood = neighborhood;
+            return this;
+        }
+
+        public builder street(String street) {
+            this.street = street;
+            return this;
+        }
+
+        public builder service(String service) {
+            this.service = service;
+            return this;
+        }
+
+        public builder Location(List<String> Location) {
+            this.Location = Location;
+            return this;
+        }
+
+        public Cep build() {
+            Cep cep = new Cep();
+            cep.setState(state);
+            cep.setCity(city);
+            cep.setNeighborhood(neighborhood);
+            cep.setStreet(street);
+            cep.setService(service);
+            cep.Location = this.Location;
+            return cep;
+        }
+    }
 }

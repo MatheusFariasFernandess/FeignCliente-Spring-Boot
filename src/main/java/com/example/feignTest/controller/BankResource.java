@@ -20,6 +20,7 @@ public class BankResource {
 
     @GetMapping("/find/all")
     public List<Banks>findAllBanks(){
+
         return bankFeign.findBanks();
     }
 

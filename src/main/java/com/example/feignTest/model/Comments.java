@@ -58,4 +58,55 @@ public class Comments
     public void setBody(String body) {
         this.body = body;
     }
+
+
+    public static final class builder {
+        private Integer postId;
+        private Integer id;
+        private String name;
+        private String email;
+        private String body;
+
+        private builder() {
+        }
+
+        public static builder aComments() {
+            return new builder();
+        }
+
+        public builder postId(Integer postId) {
+            this.postId = postId;
+            return this;
+        }
+
+        public builder id(Integer id) {
+            this.id = id;
+            return this;
+        }
+
+        public builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public builder email(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public builder body(String body) {
+            this.body = body;
+            return this;
+        }
+
+        public Comments build() {
+            Comments comments = new Comments();
+            comments.setPostId(postId);
+            comments.setId(id);
+            comments.setName(name);
+            comments.setEmail(email);
+            comments.setBody(body);
+            return comments;
+        }
+    }
 }

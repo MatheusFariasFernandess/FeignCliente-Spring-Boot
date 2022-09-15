@@ -52,4 +52,46 @@ public class Posts {
     }
 
 
+    public static final class builder {
+        private Integer userId;
+        private Integer id;
+        private String title;
+        private String body;
+
+        private builder() {
+        }
+
+        public static builder aPosts() {
+            return new builder();
+        }
+
+        public builder userId(Integer userId) {
+            this.userId = userId;
+            return this;
+        }
+
+        public builder id(Integer id) {
+            this.id = id;
+            return this;
+        }
+
+        public builder title(String title) {
+            this.title = title;
+            return this;
+        }
+
+        public builder body(String body) {
+            this.body = body;
+            return this;
+        }
+
+        public Posts build() {
+            Posts posts = new Posts();
+            posts.setUserId(userId);
+            posts.setId(id);
+            posts.setTitle(title);
+            posts.setBody(body);
+            return posts;
+        }
+    }
 }
