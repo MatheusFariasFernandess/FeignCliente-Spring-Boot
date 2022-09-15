@@ -1,5 +1,7 @@
 package com.example.feignTest.model;
 
+import java.util.List;
+
 public class Cep {
 
     private String cep;
@@ -8,6 +10,8 @@ public class Cep {
     private String neighborhood;
     private String street;
     private String service;
+
+    private List<String> Location;
 
     public Cep() {
     }

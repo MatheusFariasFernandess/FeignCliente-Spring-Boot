@@ -12,6 +12,6 @@ import java.util.List;
 public interface CepFeign {
 
     @GetMapping("cep/v1/{cep}")
-    List<Cep>findAllCep(@PathVariable("cep") String cep);
+    Cep find(@PathVariable("cep") Integer cep);
 
 }

@@ -19,8 +19,8 @@ public class CepController {
 
     }
 
-    @GetMapping("/localizarCep/{cep}")
-    public List<Cep>findAllCep(@PathVariable("cep") String cep){
-        return cepFeign.findAllCep(cep);
+    @GetMapping("/find/{cep}")
+    public Cep findCep(@PathVariable("cep") Integer cep){
+        return cepFeign.find(cep);
     }
 }
