@@ -15,18 +15,29 @@ public class Banks {
     private String name;
     private Integer code;
     private String fullName;
+    private String message;
+    private String type;
 
     public Banks() {
     }
 
-    public Banks(Integer id,String ispb, String name, Integer code, String fullName) {
-        this.id=id;
+    public Banks(Integer id, String ispb, String name, Integer code, String fullName, String message, String type) {
+        this.id = id;
         this.ispb = ispb;
         this.name = name;
         this.code = code;
         this.fullName = fullName;
+        this.message = message;
+        this.type = type;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getIspb() {
         return ispb;
@@ -60,11 +71,19 @@ public class Banks {
         this.fullName = fullName;
     }
 
-    public void setId(Integer id){
-        this.id=id;
+    public String getMessage() {
+        return message;
     }
 
-    public Integer getId(){
-        return this.id;
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

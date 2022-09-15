@@ -3,10 +3,7 @@ package com.example.feignTest.controller;
 import com.example.feignTest.interfaces.CepFeign;
 import com.example.feignTest.model.Cep;
 import org.springframework.nativex.hint.AotProxyHint;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,8 +19,8 @@ public class CepController {
 
     }
 
-    @GetMapping("/{cep}")
-    public List<Cep>findAllCep(@PathVariable("cep") Integer cep){
+    @GetMapping("/localizarCep/{cep}")
+    public List<Cep>findAllCep(@PathVariable("cep") String cep){
         return cepFeign.findAllCep(cep);
     }
 }

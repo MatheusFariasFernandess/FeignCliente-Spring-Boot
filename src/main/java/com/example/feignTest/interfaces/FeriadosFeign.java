@@ -1,6 +1,6 @@
 package com.example.feignTest.interfaces;
 
-import com.example.feignTest.model.Cep;
+import com.example.feignTest.model.Feriados;
 import feign.Param;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "CEP",url = "https://brasilapi.com.br/api/")
-public interface CepFeign {
+@FeignClient(name = "Feriados",url = "https://brasilapi.com.br/api/feriados/v1")
+public interface FeriadosFeign {
 
-    @GetMapping("cep/v1/{cep}")
-    List<Cep>findAllCep(@PathVariable("cep") String cep);
-
+    @GetMapping("/{ano}")
+    List<Feriados> findByAno(@PathVariable("ano") Integer ano);
 }

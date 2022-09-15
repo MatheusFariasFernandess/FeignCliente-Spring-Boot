@@ -18,13 +18,13 @@ public class BankResource {
         this.bankFeign = bankFeign;
     }
 
-    @GetMapping(path = "/all")
+    @GetMapping("/find/all")
     public List<Banks>findAllBanks(){
         return bankFeign.findBanks();
     }
 
-    @GetMapping(path = "find/{code}")
-    public Banks findByCode(@PathVariable("code")Long code){
+    @GetMapping("/find/{code}")
+    public Banks findByCode(@PathVariable("code")Integer code){
         return bankFeign.findByCode(code);
     }
 }
