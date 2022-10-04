@@ -22,10 +22,6 @@ public class Feriados {
         this.fullName = fullName;
     }
 
-    public Integer getAno() {
-        return ano;
-    }
-
     public void setAno(Integer ano) {
         this.ano = ano;
     }
@@ -54,9 +50,6 @@ public class Feriados {
         this.name = name;
     }
 
-    public String getFullName() {
-        return fullName;
-    }
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
@@ -70,8 +63,7 @@ public class Feriados {
         private String name;
         private String fullName;
 
-        private builder() {
-        }
+        private builder(){}
 
         public static builder aFeriados() {
             return new builder();

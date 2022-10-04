@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/feriados")
+
 public class FeriadosResource {
 
     private final FeriadosFeign feriadosFeign;

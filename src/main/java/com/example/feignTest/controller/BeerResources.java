@@ -21,12 +21,17 @@ public class BeerResources {
     }
 
     @GetMapping("/find/{id}")
-    public List<Beer>findAll(@PathVariable("id") Long id){
+    public List<Beer>findAll(@PathVariable("id") Integer id){
         return beerFeign.findById(id);
     }
 
     @GetMapping("/find/random")
     public List<Beer>findRandom(){
         return beerFeign.findRandom();
+    }
+
+    @GetMapping("/find/all")
+    public List<Beer>findAll(){
+        return beerFeign.findAll();
     }
 }
